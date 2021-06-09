@@ -17,7 +17,7 @@ class LoginPage extends StatelessWidget {
 
   }
   void onLoginTap(BuildContext context){
-    Navigator.of(context).popAndPushNamed(MainScreen.homePagePath);
+    Navigator.of(context).pushReplacementNamed(MainScreen.homePagePath);
   }
 
   @override

@@ -1,4 +1,6 @@
 import 'dart:ui';
+import 'package:mhapp_flutter/widgets/FacultyStatus.dart';
+
 import './screens/LoginPage.dart';
 import './screens/RegisterPage.dart';
 import './screens/MainScreen.dart';
@@ -29,7 +31,7 @@ class HomePage extends StatelessWidget {
     ,appBarTheme:AppBarTheme(backgroundColor:Color.fromRGBO(25, 53, 102,1),textTheme:Theme.of(context).textTheme),
     )
 
-    ,home:MainScreen(),
+    ,home:LoginPage(),
         routes: {RegisterPage.registerPath:(ctx) => RegisterPage(),
                 LoginPage.loginPagePath:(ctx) => LoginPage(),
                 MainScreen.homePagePath:(ctx) => MainScreen(),

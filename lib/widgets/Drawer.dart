@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:mhapp_flutter/screens/AboutUsScreen.dart';
+import '../screens/MainScreen.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:mhapp_flutter/screens/FacultyStatusPage.dart';
 
 class DrawerWidget extends StatelessWidget {
 
@@ -46,13 +49,28 @@ class DrawerWidget extends StatelessWidget {
 
     ),
         Card(child: ListTile(selectedTileColor:Theme.of(context).primaryColor,leading:Icon(Icons.group),
-          title:Text("Faculty Status",style: TextStyle(fontSize:20,fontFamily:'Product Sans',color:Theme.of(context).accentColor),),onTap: () {},)),
+          title:Text("Dashboard",style: TextStyle(fontSize:20,fontFamily:'Product Sans',color:Theme.of(context).accentColor),),onTap: () {
+          Navigator.of(context).pushReplacementNamed(MainScreen.homePagePath);
+          },)),
+        Card(child: ListTile(selectedTileColor:Theme.of(context).primaryColor,leading:Icon(Icons.group),
+          title:Text("Faculty Status",style: TextStyle(fontSize:20,fontFamily:'Product Sans',color:Theme.of(context).accentColor),),onTap: () {
+            Navigator.of(context).pushReplacementNamed(FacultyStatusPage.facultyStatusPagePath);
+          },)),
         Card(child: ListTile(selectedTileColor:Theme.of(context).primaryColor,leading:Icon(Icons.book),
           title:Text("Timetable",style: TextStyle(fontSize:20,fontFamily:'Product Sans',color:Theme.of(context).accentColor),),onTap: () {},)),
         Card(child: ListTile(selectedTileColor:Theme.of(context).primaryColor,leading:Icon(Icons.text_snippet),
           title:Text("Exams",style: TextStyle(fontSize:20,fontFamily:'Product Sans',color:Theme.of(context).accentColor),),onTap: () {},)),
+        Card(child: ListTile(selectedTileColor:Theme.of(context).primaryColor,leading:Icon(Icons.event),
+          title:Text("Events",style: TextStyle(fontSize:20,fontFamily:'Product Sans',color:Theme.of(context).accentColor),),onTap: () {},)),
+        Card(child: ListTile(selectedTileColor:Theme.of(context).primaryColor,leading:Icon(Icons.alarm_on),
+          title:Text("Opportunities",style: TextStyle(fontSize:20,fontFamily:'Product Sans',color:Theme.of(context).accentColor),),onTap: () {},)),
+        Card(child: ListTile(selectedTileColor:Theme.of(context).primaryColor,leading:Icon(Icons.weekend),
+          title:Text("Holidays",style: TextStyle(fontSize:20,fontFamily:'Product Sans',color:Theme.of(context).accentColor),),onTap: () {},)),
         Card(child: ListTile(selectedTileColor:Theme.of(context).primaryColor,leading:Icon(Icons.contact_support),
-          title:Text("About Us",style: TextStyle(fontSize:20,fontFamily:'Product Sans',color:Theme.of(context).accentColor),),onTap: () {},)),
+          title:Text("About Us",style: TextStyle(fontSize:20,fontFamily:'Product Sans',color:Theme.of(context).accentColor),),onTap: () {
+            Navigator.of(context).pushReplacementNamed(AboutUsScreen.aboutUsPath);
+          },)),
+
 
       ],
     );
